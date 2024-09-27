@@ -89,18 +89,6 @@ li {
   border: 1px solid #7d7d7d;
 }
 
-.usersCard {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-.user {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
 .userDetail img {
   border: 1px solid #fff;
   border-radius: 100%;
@@ -193,3 +181,124 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
+
+.userName {
+  display: flex;
+  align-items: center;
+}
+
+.users {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 18px;
+  border-bottom: 2px solid #dfdfdfb0;
+}
+
+.userListDetail {
+  display: flex;
+  align-items: center;
+}
+
+.usersListCard {
+  display: flex;
+  justify-content: space-between;
+}
+/*-------------------List*/
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.todo div {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo div:hover {
+  background-color: #e0e0e0;
+}
+
+.todo div::before {
+  content: "• ";
+  color: #555;
+  font-weight: bold;
+}
+/*-------About */
+
+.aboutUsers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutUser {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.aboutUser img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.age, .gender, .phone{
+  font-size: 1rem;
+  color: #555;
+}
+
+.address, .company, .university {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.address h3, .company h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 4px 0;
+}
+
+.university {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+

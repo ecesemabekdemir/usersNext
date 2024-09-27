@@ -5,10 +5,9 @@ export default function Header() {
   return (
     <>
       <div className="header">
-        <h1>LARGE</h1>
+        <h1>MEDIUM</h1>
         <Nav />
         <div className="profil">
-          <div className="write">Write</div>
           <img src={Users.src} alt="" />
           <div className="userProfilimg"></div>
         </div>

@@ -28,8 +28,9 @@ export default async function ProductsDetail({ params }) {
             <div className="nameBox">
               <h4>
                 {data.firstName} {data.lastName}
-              </h4>
-              <p>457 Followers</p>
+              </h4>     
+              <p>{data.address.address}</p>
+              <p>{data.address.city}</p>
             </div>
           </div>
           <div className="follow">

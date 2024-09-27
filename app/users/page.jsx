@@ -9,18 +9,27 @@ export default async function Users() {
   return (
     <>
       <div className="usersList">
-        <ul className="usersCard">
+        <div className="usersListCard">
           {users.map((x) => (
-            <li className="user" key={x.id}>
-              <img src={x.image}></img>
-              <p> {x.firstName}</p>
-              <p>{x.lastName}</p>
-              <Link className="detail" href={`/users/${x.id}`}>
-                profile git
-              </Link>
-            </li>
+            <div className="users" key={x.id}>
+              <img className="userImg" src={x.image}></img>
+              <div className="userListDetail">
+                <div>
+                  <div className="userName">
+                    <p> {`${x.firstName} ${x.lastName}`}</p>
+                  </div>
+                  <div className="userInfo">
+                    <p className="age">{x.age}</p>
+                    <p className="gender">{x.gender}</p>
+                  </div>
+                </div>
+                <div className="detailLink">
+                  <Link href={`/users/${x.id}`}>profile git</Link>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );
