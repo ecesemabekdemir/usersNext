@@ -1,42 +1,195 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
+}
+/*
+  2. Remove default margin
+*/
+* {
   margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+li {
+  list-style: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+}
+
+.header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 40px;
+  border-bottom: 2px solid #dfdfdfb0;
+  margin-bottom: 60px;
+}
+
+.nav input {
+  width: 600px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #7d7d7d;
+}
+
+.usersCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.userDetail img {
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+.userDetailContainer {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.userDetailHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.detailCard {
+  display: flex;
+  align-items: start;
+  gap: 9px;
+  margin-bottom: 15px;
+}
+
+.nameBox p {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0.7;
+}
+
+.followBtn {
+  border-radius: 50px;
+  color: #fff;
+  padding: 6px 15px;
+  border: 1px solid #156d12;
+  background: none;
+  cursor: pointer;
+  background-color: #156d12;
+}
+
+.mesBtn {
+  border-radius: 50px;
+  color: #fff;
+  padding: 6px 15px;
+  border: 1px solid;
+  background: none;
+  cursor: pointer;
+  background-color: #156d12;
+}
+
+.btn {
+  padding: 6px 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/*user nav */
+.userDetailNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 18px;
+  border-bottom: 2px solid #dfdfdfb0;
+  a {
+    color: #716c6cb0;
+    margin-bottom: 10px;
   }
+
+  a:hover {
+    color: #131212b0;
+    border-bottom: 1px solid #131212b0;
+  }
+}
+.profil {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: large;
+  color: gray;
+}
+.userProfilimg {
+  border: 1px solid gray;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+}
+
+.todo {
+  display: flex;
+  flex-wrap: wrap;
 }
